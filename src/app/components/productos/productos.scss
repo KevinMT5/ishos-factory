@@ -1,0 +1,84 @@
+.productos {
+  padding: 100px 60px;
+  background: var(--cream2);
+}
+
+.prod-header {
+  text-align: center; margin-bottom: 60px;
+}
+
+.eyebrow {
+  font-size: 12px; font-weight: 500;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--turquoise); margin-bottom: 12px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 900; line-height: 1.1; margin-bottom: 16px;
+  em { font-style: italic; color: var(--turquoise); }
+}
+
+.prod-desc { font-size: 16px; color: var(--text2); max-width: 500px; margin: 0 auto; line-height: 1.7; }
+
+.prod-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 24px; max-width: 1100px; margin: 0 auto;
+}
+
+.prod-card {
+  background: #fff; border-radius: 24px; overflow: hidden;
+  border: 1px solid var(--border);
+  transition: transform .3s, box-shadow .3s;
+  &:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(43,191,170,0.15); }
+}
+
+.prod-img {
+  height: 200px; display: flex;
+  align-items: center; justify-content: center;
+  font-size: 80px;
+}
+
+.prod-body { padding: 24px; }
+
+.prod-tag {
+  display: inline-block; padding: 4px 12px;
+  border-radius: 50px; font-size: 11px;
+  font-weight: 500; margin-bottom: 10px;
+}
+
+.tag-vegan { background: #e8f5e9; color: #2e7d32; }
+.tag-new   { background: #fce4ec; color: #c2185b; }
+.tag-classic { background: var(--turq-light); color: var(--turq-dark); }
+.tag-exotic { background: #fff3e0; color: #e65100; }
+
+.prod-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700; margin-bottom: 8px;
+}
+
+.prod-desc-txt {
+  font-size: 14px; color: var(--text2);
+  line-height: 1.6; margin-bottom: 16px;
+}
+
+.prod-footer {
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.prod-price { font-size: 18px; font-weight: 500; color: var(--turquoise); }
+
+.prod-btn {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--turquoise); color: #fff; border: none;
+  font-size: 20px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .2s;
+  &:hover { background: var(--turq-dark); transform: scale(1.1); }
+}
+
+@media (max-width: 900px) {
+  .productos { padding: 60px 24px; }
+  .prod-grid { grid-template-columns: 1fr; }
+}

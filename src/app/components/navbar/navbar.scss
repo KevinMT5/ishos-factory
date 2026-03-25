@@ -1,0 +1,73 @@
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 60px;
+  background: rgba(255,248,238,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: all .3s;
+
+  &.scrolled {
+    padding: 12px 60px;
+    background: rgba(255,248,238,0.98);
+    border-bottom-color: var(--border2);
+  }
+}
+
+.logo-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 900;
+  color: var(--turquoise); letter-spacing: -.5px;
+  text-decoration: none;
+  span { color: var(--mango); }
+}
+
+.nav-links {
+  display: flex; gap: 36px; list-style: none;
+  a {
+    font-size: 14px; font-weight: 500;
+    color: var(--text2); cursor: pointer;
+    transition: color .2s;
+    &:hover { color: var(--turquoise); }
+  }
+  .mobile-cta { display: none; }
+}
+
+.nav-btn {
+  background: var(--turquoise); color: #fff;
+  padding: 10px 24px; border-radius: 50px;
+  font-size: 14px; font-weight: 500;
+  cursor: pointer; transition: all .2s;
+  &:hover { background: var(--turq-dark); transform: translateY(-1px); }
+}
+
+.burger {
+  display: none; flex-direction: column;
+  gap: 5px; background: none; border: none;
+  cursor: pointer; padding: 4px;
+  span {
+    display: block; width: 22px; height: 2px;
+    background: var(--text); transition: all .25s;
+    transform-origin: center;
+  }
+  &.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  &.active span:nth-child(2) { opacity: 0; }
+  &.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  .desktop-cta { display: none; }
+  .burger { display: flex; }
+  .nav-links {
+    position: fixed; inset: 0;
+    background: rgba(255,248,238,0.98);
+    flex-direction: column; align-items: center;
+    justify-content: center; gap: 28px;
+    opacity: 0; pointer-events: none;
+    transition: opacity .3s; z-index: -1;
+    &.open { opacity: 1; pointer-events: all; }
+    a { font-size: 20px; }
+    .mobile-cta { display: block; }
+  }
+}

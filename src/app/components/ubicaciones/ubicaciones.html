@@ -1,0 +1,18 @@
+<section class="ubicaciones" id="ubicaciones">
+  <div class="ub-header">
+    <p class="eyebrow">Dónde encontrarnos</p>
+    <h2>Visítanos en <em>Ahuachapán</em></h2>
+  </div>
+  <div class="ub-grid">
+    <div class="ub-card" *ngFor="let u of ubicaciones">
+      <div class="ub-icon">📍</div>
+      <div class="ub-name">{{u.name}}</div>
+      <div class="ub-address">{{u.address}}</div>
+      <div class="ub-hours">
+        <div class="ub-row"><span>Lunes – Viernes</span><span>{{u.weekday}}</span></div>
+        <div class="ub-row"><span>Sábado – Domingo</span><span>{{u.weekend}}</span></div>
+      </div>
+      <a href="https://wa.me/50376454347" class="ub-cta">Escribir por WhatsApp →</a>
+    </div>
+  </div>
+</section>

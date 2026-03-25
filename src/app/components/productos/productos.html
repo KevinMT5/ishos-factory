@@ -1,0 +1,21 @@
+<section class="productos" id="productos">
+  <div class="prod-header">
+    <p class="eyebrow">Nuestro menú</p>
+    <h2>Sabores que te <em>enamoran</em></h2>
+    <p class="prod-desc">Elaborados con frutas frescas y cariño artesanal. Opciones veganas, sin azúcar y sabores únicos.</p>
+  </div>
+  <div class="prod-grid">
+    <div class="prod-card" *ngFor="let p of productos">
+      <div class="prod-img" [style.background]="p.bg">{{p.emoji}}</div>
+      <div class="prod-body">
+        <span class="prod-tag" [ngClass]="p.tagClass">{{p.tag}}</span>
+        <div class="prod-name">{{p.name}}</div>
+        <p class="prod-desc-txt">{{p.desc}}</p>
+        <div class="prod-footer">
+          <span class="prod-price">{{p.price}}</span>
+          <button class="prod-btn">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

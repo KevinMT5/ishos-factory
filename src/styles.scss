@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:       #FFF8EE;
+  --cream2:      #FFF0D6;
+  --turquoise:   #2BBFAA;
+  --turq-dark:   #1A9688;
+  --turq-light:  #E0F7F4;
+  --mango:       #FF8C42;
+  --mango-dark:  #E6722A;
+  --pitaya:      #E91E8C;
+  --text:        #1A1A1A;
+  --text2:       #5A5550;
+  --white:       #FFFFFF;
+  --border:      rgba(43,191,170,0.12);
+  --border2:     rgba(43,191,170,0.25);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}

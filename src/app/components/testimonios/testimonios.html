@@ -1,0 +1,19 @@
+<section class="testimonios">
+  <div class="test-header">
+    <p class="eyebrow">Lo que dicen</p>
+    <h2>Clientes que nos <em>quieren</em></h2>
+  </div>
+  <div class="test-grid">
+    <div class="test-card" *ngFor="let t of testimonios">
+      <div class="stars">★★★★★</div>
+      <p class="test-text">"{{t.text}}"</p>
+      <div class="test-author">
+        <div class="test-avatar">{{t.avatar}}</div>
+        <div>
+          <div class="test-name">{{t.name}}</div>
+          <div class="test-loc">{{t.loc}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
